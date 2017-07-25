@@ -16,7 +16,7 @@
       <h4 (click)="menu.toggle()">Menu</h4>
     </md-toolbar>
     <div class="content">
-      <div class="block">
+      <div [ngClass]="firstBlockClasses">
         <swiper class="welcome-slider" [config]="swiperConfig">
           <div class="swiper-wrapper">
             <div class="swiper-slide welcome-slider__slide">

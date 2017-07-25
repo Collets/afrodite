@@ -8,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   public startpageClasses : string = 'startpage';
+
+  private _firstBlockClasses: string;
+  get firstBlockClasses():string {
+
+    return this.step == 0 ? 'block' : 'block block--hidden';
+  }
+
   public step: number = 0;
   public totalStep: number = 10;
 
