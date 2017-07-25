@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'src/styles/_fonts';
+@import 'src/styles/_afrodite-theme';
+
+html{
+    width:100%;
+    height: 100%;
+
+    font-size: 62.5%;
+}
+
+body{
+    width:100%;
+    height: 100%;
+
+    margin: 0;
+
+    @include regular;
+}

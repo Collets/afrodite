@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+
+$font: 'Roboto', sans-serif;
+
+@mixin thin{
+    font-family: $font;
+    font-weight: 100;
+}
+
+@mixin light{
+    font-family: $font;
+    font-weight: 300;
+}
+
+@mixin regular{
+    font-family: $font;
+    font-weight: 400;
+}
+
+@mixin medium{
+    font-family: $font;
+    font-weight: 500;
+}
+
+@mixin bold{
+    font-family: $font;
+    font-weight: 700;
+}
