@@ -48,11 +48,11 @@ export class HomeComponent implements OnInit {
 
     switch(step){
       case 0:
-        return 'START';
+        return 'INIZIA';
       case this.totalStep:
-        return 'FINISH';
+        return 'COMPLETA!';
       default:
-        return 'NEXT';
+        return 'AVANTI';
     }
   }
 

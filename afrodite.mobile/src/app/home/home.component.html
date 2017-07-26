@@ -15,17 +15,19 @@
       <i-menu (click)="menu.toggle()"></i-menu>
       <h4 (click)="menu.toggle()">Menu</h4>
     </md-toolbar>
-    <div class="content">
-      <afrodite-blocks [step]="step" [totalStep]="totalStep" (onAnswer)="onAnswer($event)" (onNext)="next()"></afrodite-blocks>
-      <button md-fab class="help-button"><h1>?</h1></button>
-    </div>
-    <md-toolbar class="footer" *ngIf="step > 0 && this.step <= this.totalStep">
-      <div class="progress-bar">
-        <md-progress-bar [color]="primary" [value]="stepPercent" mode="buffer"></md-progress-bar>
+    <div class="content-container">
+      <div class="content">
+        <afrodite-blocks [step]="step" [totalStep]="totalStep" (onAnswer)="onAnswer($event)" (onNext)="next()"></afrodite-blocks>
+        <!-- <button md-fab class="help-button"><h1>?</h1></button> -->
       </div>
-      <button md-button class="continue" (click)="next()" [class.continue--disabled]="!this.canNext && this.step != 0">
-        {{continueButton}}
-      </button>
-    </md-toolbar>
+      <md-toolbar class="footer" *ngIf="step > 0 && this.step <= this.totalStep">
+        <div class="progress-bar">
+          <md-progress-bar [color]="primary" [value]="stepPercent" mode="buffer"></md-progress-bar>
+        </div>
+        <button md-button class="continue" (click)="next()" [class.continue--disabled]="!this.canNext && this.step != 0">
+          {{continueButton}}
+        </button>
+      </md-toolbar>
+    </div>
   </md-sidenav-container>
 </section>

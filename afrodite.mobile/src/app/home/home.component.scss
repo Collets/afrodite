@@ -60,9 +60,20 @@
 
 ///////MAINPAGE
 
+.content-container{
+    width: 100%;
+    height: calc(100% - 56px);
+
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
 .content{
     width: 100%;
-    height: calc(100% - 112px);
+    height: 100%;
 
     overflow: hidden;
     position: relative;
