@@ -1,4 +1,6 @@
+import { InfoPopupComponent } from '../info-popup/info-popup.component';
 import { Component, OnInit } from '@angular/core';
+import {MdDialog, MdDialogRef} from '@angular/material';
 
 @Component({
   selector: 'afrodite-home',
@@ -8,12 +10,6 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   public startpageClasses : string = 'startpage';
-
-  private _firstBlockClasses: string;
-  get firstBlockClasses():string {
-
-    return this.step == 0 ? 'block' : 'block block--hidden';
-  }
 
   public step: number = 0;
   public totalStep: number = 10;
@@ -34,13 +30,9 @@ export class HomeComponent implements OnInit {
     return this.getContinueButtonValue(this.step);
   }
 
-  public swiperConfig: Object = {
-      pagination: '.swiper-pagination',
-      paginationClickable: true,
-      spaceBetween: 30,
-  };
+  public canNext:boolean = false;
 
-  constructor() { }
+  constructor(public dialog: MdDialog) { }
 
   ngOnInit() {
 
@@ -66,7 +58,19 @@ export class HomeComponent implements OnInit {
 
   public next(){
 
-    if(this.step<this.totalStep)
+    if(this.step<this.totalStep && (this.canNext || this.step == 0))
       this.step++
+  }
+
+  public openInfo() {
+
+    let dialogRef = this.dialog.open(InfoPopupComponent);
+    dialogRef.afterClosed().subscribe(result => {
+    });
+  }
+
+  public onAnswer(correct:boolean){
+
+      this.canNext = correct;
   }
 }

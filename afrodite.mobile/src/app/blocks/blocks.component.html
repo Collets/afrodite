@@ -1,0 +1,36 @@
+<div [ngClass]="blockClasses[0]">
+  <swiper class="welcome-slider" [config]="swiperConfig">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide welcome-slider__slide">
+        <h2 class="welcome-slider__title">Completa il quiz</h2>
+        <i-pocket class="welcome-slider__icon"></i-pocket>
+      </div>
+      <div class="swiper-slide welcome-slider__slide">
+        <h2 class="welcome-slider__title">Trova il regalo</h2>
+        <i-compass class="welcome-slider__icon"></i-compass>
+      </div>
+      <div class="swiper-slide welcome-slider__slide">              
+        <h2 class="welcome-slider__title">Divertiti!</h2>
+        <i-heart class="welcome-slider__icon"></i-heart>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </swiper>
+</div>
+<div [ngClass]="blockClasses[1]">
+  <div class="question">
+    <div class="question__header">
+      <h2 class="question__title">Titolo domanda</h2>
+    </div>
+    <div class="question__content">
+      <p>Spiegazione non obbligatoria per rispondere alla domanda</p>
+    </div>
+  </div>
+  <div class="answer">
+    <form (ngSubmit)="onSubmit()">
+      <md-input-container class="answer__input">
+        <input mdInput placeholder="Risposta" [(ngModel)]="firstAnswer" (ngModelChange)="changeAnswer($event)" name="first-answer">
+      </md-input-container>
+    </form>
+  </div>
+</div>

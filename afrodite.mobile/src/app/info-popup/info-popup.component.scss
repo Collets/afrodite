@@ -1,0 +1,15 @@
+@import 'src/styles/_fonts';
+
+.text{
+    font-size: 2rem;
+
+    @include regular;
+}
+
+.button{
+    @include medium;
+
+    font-size: 1.8rem;
+
+    margin-left: auto;
+}

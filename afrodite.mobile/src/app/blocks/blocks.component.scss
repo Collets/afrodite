@@ -1,0 +1,120 @@
+@import 'src/styles/_colors';
+@import 'src/styles/_fonts';
+
+///////BLOCKS
+
+.block{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 800;
+
+    transition-duration: 600ms;
+}
+
+.block--0{
+    z-index: 800;
+}
+
+.block--1{
+    z-index: 750;
+}
+
+.block--2{
+    z-index: 700;
+}
+
+.block--3{
+    z-index: 650;
+}
+
+.block--4{
+    z-index: 600;
+}
+
+.block--5{
+    z-index: 550;
+}
+
+.block--6{
+    z-index: 500;
+}
+
+.block--7{
+    z-index: 450;
+}
+
+.block--8{
+    z-index: 400;
+}
+
+.block--9{
+    z-index: 350;
+}
+
+.block--hidden{
+    left: -100%;
+}
+
+.welcome-slider{
+    height: 100%;
+}
+
+.welcome-slider__slide{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.welcome-slider__title{
+    width: 100%;
+    font-size: 3rem;
+
+    @include light;
+
+    text-align: center;
+}
+
+.welcome-slider__icon{
+    height: 100px;
+    width: 100px;
+}
+
+:host /deep/ .welcome-slider__icon .feather{
+    height: 100px;
+    width: 100px;
+}
+
+///////QUESTION
+.question{
+    height: 150px;
+    width: 100%;
+}
+
+.question__title{
+    font-size: 2.2rem;
+
+    @include medium;
+}
+
+.question__content{
+    font-size: 1.8rem;
+
+    @include regular;
+}
+
+///////ANSWER
+.answer__input{
+    width: 100%;
+    
+    font-size: 2.2rem;
+}
