@@ -1,3 +1,4 @@
+import { retry } from 'rxjs/operator/retry';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 import * as _ from 'lodash';
@@ -34,17 +35,18 @@ export class BlocksComponent implements OnInit {
       spaceBetween: 30,
   };
     
-  public firstAnswer: string;
-  public firstCorrectAnswer: string ='Tigre';
+  public answers: Array<any>;
+  public correctAnswers: Array<any>;
 
-  public _answer: boolean;
-  get answer(){
-    switch(this.step){
-      case 1:
-        return this.firstAnswer == this.firstCorrectAnswer;
-      default: 
-        return true;
-    }
+  public secondAnswer
+
+  // private _correct: boolean;
+  get correct(){
+    
+    if(this.step>0)
+      return this.answers[this.step-1] == this.correctAnswers[this.step-1];
+
+    return true;
   }
 
   constructor() { }
@@ -52,27 +54,42 @@ export class BlocksComponent implements OnInit {
   ngOnInit() {
     
     this.blockClasses = new Array<string>();
-    for(let i:number = 0; i<this.totalStep;i++){
+    for(let i:number = 0; i <= this.totalStep;i++){
 
       this.blockClasses.push('block ' + 'block--' + i);
     }
+
+    this.answers = new Array<any>(this.totalStep);
+    this.correctAnswers = new Array<any>();
+
+    this.setCorrectAnswers();
   }
 
   public changeClass(){
 
-    for(let i:number = 0;i<this.step;i++){
+    for(let i:number = 0;i < this.step;i++){
 
       this.blockClasses[i] = 'block block--hidden';
     }
   }
-
   public changeAnswer(){
 
-    this.onAnswer.emit(this.answer);
+    this.onAnswer.emit(this.correct);
   }
 
   public onSubmit(){
 
     this.onNext.emit();
+  }
+
+  public setCorrectAnswers(){
+
+    for(let i:number = 0; i < this.totalStep;i++){
+
+      this.correctAnswers.push('1');
+    }
+
+    this.correctAnswers[0] = 'Tigre';
+    this.correctAnswers[1] = '19';
   }
 }

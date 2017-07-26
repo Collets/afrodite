@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 
-import {MdToolbarModule, MdSidenavModule, MdButtonModule,MdProgressBarModule, MdDialogModule, MdInputModule} from '@angular/material';
+import {MdToolbarModule, MdSidenavModule, MdButtonModule,MdProgressBarModule, MdDialogModule, MdInputModule, MdRadioModule, MdListModule} from '@angular/material';
 
 import { IconMenu, IconInfo, IconCompass, IconPocket, IconHeart } from 'angular-feather/angular-feather';
 
@@ -36,6 +36,8 @@ import { BlocksComponent } from './blocks/blocks.component';
     MdProgressBarModule,
     MdDialogModule,
     MdInputModule,
+    MdRadioModule,
+    MdListModule,
     BrowserAnimationsModule,
     SwiperModule,
     IconMenu,
