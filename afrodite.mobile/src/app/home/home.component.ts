@@ -58,7 +58,7 @@ export class HomeComponent implements OnInit {
 
   public next(){
 
-    if(this.step<this.totalStep && (this.canNext || this.step == 0)){
+    if(this.step <= this.totalStep && (this.canNext || this.step == 0)){
 
       this.step++
       this.canNext = false;

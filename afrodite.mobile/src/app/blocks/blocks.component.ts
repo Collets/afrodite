@@ -1,7 +1,8 @@
 import { retry } from 'rxjs/operator/retry';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, QueryList, ViewChildren } from '@angular/core';
 
 import * as _ from 'lodash';
+import { MdInputDirective } from '@angular/material';
 
 @Component({
   selector: 'afrodite-blocks',
@@ -19,6 +20,7 @@ export class BlocksComponent implements OnInit {
     this._step = step;
 
     this.changeClass();
+    this.focus();
   }
   
   get step(): number{
@@ -37,8 +39,8 @@ export class BlocksComponent implements OnInit {
     
   public answers: Array<any>;
   public correctAnswers: Array<any>;
-
-  public secondAnswer
+  
+  @ViewChildren(MdInputDirective) inputs: QueryList<MdInputDirective>;
 
   // private _correct: boolean;
   get correct(){
@@ -91,5 +93,17 @@ export class BlocksComponent implements OnInit {
 
     this.correctAnswers[0] = 'Tigre';
     this.correctAnswers[1] = '19';
+  }
+
+  public focus(){
+
+    if(this.inputs){
+
+      this.inputs.forEach((item)=>{
+
+        if(item && item.id == ('input-' + (this.step - 1)))
+          item.focus();
+      });
+    }
   }
 }

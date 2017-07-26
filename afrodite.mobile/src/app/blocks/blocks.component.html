@@ -3,19 +3,24 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide welcome-slider__slide">
         <h2 class="welcome-slider__title">Completa il quiz</h2>
-        <i-pocket class="welcome-slider__icon"></i-pocket>
+        <img src="/assets/images/quiz.gif" class="welcome-slider__icon">
       </div>
       <div class="swiper-slide welcome-slider__slide">
         <h2 class="welcome-slider__title">Trova il regalo</h2>
-        <i-compass class="welcome-slider__icon"></i-compass>
+        <img src="/assets/images/search.gif" class="welcome-slider__icon">
       </div>
       <div class="swiper-slide welcome-slider__slide">              
         <h2 class="welcome-slider__title">Divertiti!</h2>
-        <i-heart class="welcome-slider__icon"></i-heart>
+        <img src="/assets/images/fun.gif" class="welcome-slider__icon">
       </div>
     </div>
     <div class="swiper-pagination"></div>
   </swiper>
+  <div class="welcome-commands">
+    <button md-raised-button class="welcome-button" color="primary" (click)="onSubmit()">
+        INIZIA
+    </button>
+  </div>
 </div>
 <div [ngClass]="blockClasses[1]">
   <div class="question">
@@ -29,7 +34,7 @@
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
       <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[0]" (ngModelChange)="changeAnswer($event)" name="first-answer">
+        <input mdInput placeholder="Risposta" [(ngModel)]="answers[0]" (ngModelChange)="changeAnswer($event)" name="first-answer" id="input-0">
       </md-input-container>
     </form>
   </div>
@@ -71,7 +76,7 @@
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
       <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[2]" (ngModelChange)="changeAnswer($event)" name="first-answer">
+        <input mdInput placeholder="Risposta" [(ngModel)]="answers[2]" (ngModelChange)="changeAnswer($event)" name="first-answer" id="input-2">
       </md-input-container>
     </form>
   </div>
@@ -88,7 +93,7 @@
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
       <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[3]" (ngModelChange)="changeAnswer($event)" name="first-answer">
+        <input mdInput placeholder="Risposta" [(ngModel)]="answers[3]" (ngModelChange)="changeAnswer($event)" name="first-answer" id="input-3">
       </md-input-container>
     </form>
   </div>
@@ -105,7 +110,7 @@
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
       <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[4]" (ngModelChange)="changeAnswer($event)" name="first-answer">
+        <input mdInput placeholder="Risposta" [(ngModel)]="answers[4]" (ngModelChange)="changeAnswer($event)" name="first-answer" id="input-4">
       </md-input-container>
     </form>
   </div>
@@ -122,7 +127,7 @@
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
       <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[5]" (ngModelChange)="changeAnswer($event)" name="first-answer">
+        <input mdInput placeholder="Risposta" [(ngModel)]="answers[5]" (ngModelChange)="changeAnswer($event)" name="first-answer" id="input-5">
       </md-input-container>
     </form>
   </div>
@@ -139,7 +144,7 @@
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
       <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[6]" (ngModelChange)="changeAnswer($event)" name="first-answer">
+        <input mdInput placeholder="Risposta" [(ngModel)]="answers[6]" (ngModelChange)="changeAnswer($event)" name="first-answer" id="input-6">
       </md-input-container>
     </form>
   </div>
@@ -156,7 +161,7 @@
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
       <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[7]" (ngModelChange)="changeAnswer($event)" name="first-answer">
+        <input mdInput placeholder="Risposta" [(ngModel)]="answers[7]" (ngModelChange)="changeAnswer($event)" name="first-answer" id="input-7">
       </md-input-container>
     </form>
   </div>
@@ -173,7 +178,7 @@
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
       <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[8]" (ngModelChange)="changeAnswer($event)" name="first-answer">
+        <input mdInput placeholder="Risposta" [(ngModel)]="answers[8]" (ngModelChange)="changeAnswer($event)" name="first-answer" id="input-8">
       </md-input-container>
     </form>
   </div>
@@ -190,7 +195,7 @@
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
       <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[9]" (ngModelChange)="changeAnswer($event)" name="first-answer">
+        <input mdInput placeholder="Risposta" [(ngModel)]="answers[9]" (ngModelChange)="changeAnswer($event)" name="first-answer" id="input-9">
       </md-input-container>
     </form>
   </div>
