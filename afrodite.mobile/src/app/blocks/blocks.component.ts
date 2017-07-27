@@ -88,10 +88,9 @@ export class BlocksComponent implements OnInit {
 
     for(let i:number = 0; i < this.totalStep;i++){
 
-      this.correctAnswers.push('1');
+      this.correctAnswers.push('Tigre');
     }
 
-    this.correctAnswers[0] = 'Tigre';
     this.correctAnswers[1] = '19';
   }
 

@@ -68,7 +68,7 @@
 }
 
 .block--compliments{
-    z-index: 250;
+    z-index: 1000; //z-index: 250;
 }
 
 .welcome-slider{
@@ -149,7 +149,7 @@
 ///////COMPLIMENTS
 .compliments{
     width: 100%;
-    height: 200px;
+    height: 185px;
 
     display: flex;
     flex-direction: column;
@@ -166,7 +166,7 @@
 
 .tips{
     width: 100%;
-    height: calc(100% - 250px);
+    height: calc(100% - 225px);
 
     display: flex;
     flex-direction: column;
@@ -185,19 +185,21 @@
 
 .tip{
     font-size: 2rem;
-    margin: 25px 0;
+    margin: 20px 0;
 
     color: $primary-dark;
 }
 
 .surprise{
     font-size: 1.6rem;
-    margin: 10px 0 30px 0;
+    margin: 10px 0 20px 0;
 }
 
 .auguri{
     width: 100%;
     height: 50px;
+
+    margin-top: 10px;
 
     display: flex;
     flex-direction: column;

@@ -3,15 +3,15 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide welcome-slider__slide">
         <h2 class="welcome-slider__title">Completa il quiz</h2>
-        <img src="/assets/images/quiz.gif" class="welcome-slider__icon">
+        <img src="assets/images/quiz.gif" class="welcome-slider__icon">
       </div>
       <div class="swiper-slide welcome-slider__slide">
         <h2 class="welcome-slider__title">Trova il regalo</h2>
-        <img src="/assets/images/search.gif" class="welcome-slider__icon">
+        <img src="assets/images/search.gif" class="welcome-slider__icon">
       </div>
       <div class="swiper-slide welcome-slider__slide">              
         <h2 class="welcome-slider__title">Divertiti!</h2>
-        <img src="/assets/images/fun.gif" class="welcome-slider__icon">
+        <img src="assets/images/fun.gif" class="welcome-slider__icon">
       </div>
     </div>
     <div class="swiper-pagination"></div>
@@ -33,9 +33,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[0]" (ngModelChange)="changeAnswer()" name="first-answer" id="input-0">
-      </md-input-container>
+      <md-select placeholder="Risposta" [(ngModel)]="answers[0]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
     </form>
   </div>
 </div>
@@ -50,7 +61,7 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-radio-group [(ngModel)]="answers[1]" (ngModelChange)="changeAnswer()" class="answer__options" name="second-answer">
+      <md-radio-group [(ngModel)]="answers[1]" (ngModelChange)="changeAnswer()" class="answer__options" name="answer">
           <md-radio-button md-line [value]="15" class="answer__option">
             Risposta 1
           </md-radio-button>
@@ -75,9 +86,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[2]" (ngModelChange)="changeAnswer()" name="first-answer" id="input-2">
-      </md-input-container>
+      <md-select placeholder="Risposta" [(ngModel)]="answers[2]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
     </form>
   </div>
 </div>
@@ -92,9 +114,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[3]" (ngModelChange)="changeAnswer()" name="first-answer" id="input-3">
-      </md-input-container>
+      <md-select placeholder="Risposta" [(ngModel)]="answers[3]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
     </form>
   </div>
 </div>
@@ -109,9 +142,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[4]" (ngModelChange)="changeAnswer()" name="first-answer" id="input-4">
-      </md-input-container>
+      <md-select placeholder="Risposta" [(ngModel)]="answers[4]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
     </form>
   </div>
 </div>
@@ -126,9 +170,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[5]" (ngModelChange)="changeAnswer()" name="first-answer" id="input-5">
-      </md-input-container>
+      <md-select placeholder="Risposta" [(ngModel)]="answers[5]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
     </form>
   </div>
 </div>
@@ -143,9 +198,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[6]" (ngModelChange)="changeAnswer()" name="first-answer" id="input-6">
-      </md-input-container>
+      <md-select placeholder="Risposta" [(ngModel)]="answers[6]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
     </form>
   </div>
 </div>
@@ -160,9 +226,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[7]" (ngModelChange)="changeAnswer()" name="first-answer" id="input-7">
-      </md-input-container>
+      <md-select placeholder="Risposta" [(ngModel)]="answers[7]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
     </form>
   </div>
 </div>
@@ -177,9 +254,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[8]" (ngModelChange)="changeAnswer()" name="first-answer" id="input-8">
-      </md-input-container>
+      <md-select placeholder="Risposta" [(ngModel)]="answers[8]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
     </form>
   </div>
 </div>
@@ -194,9 +282,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-input-container class="answer__input">
-        <input mdInput placeholder="Risposta" [(ngModel)]="answers[9]" (ngModelChange)="changeAnswer()" name="first-answer" id="input-9">
-      </md-input-container>
+      <md-select placeholder="Risposta" [(ngModel)]="answers[9]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
     </form>
   </div>
 </div>
@@ -205,15 +304,15 @@
     <h1 class="compliments__title">
       Complimenti!
     </h1>
-    <img class="compliments__image" src="/assets/images/compliments.gif">
+    <img class="compliments__image" src="assets/images/compliments.gif">
   </div>
   <div class="tips">
     <h2 class="tips__title">Ecco il suggerimento per trovare il tuo premio:</h2>
-    <p class="tip">Per l'asse Y devi salire, e dove ristori perquisire.</p>
+    <p class="tip">Per l'asse Y devi salire, e dove a volte ristori perquisire.</p>
     <p class="surprise">Una volta scartato il premio premi qui sotto per un'altra fantastica sorpresa!</p>
     <button md-raised-button class="welcome-button" color="primary" (click)="onSubmit()">SORPRESA!</button>
   </div>
   <div class="auguri">
-    <img src="/assets/images/auguri.gif">
+    <img src="assets/images/auguri.gif">
   </div>
 </div>
