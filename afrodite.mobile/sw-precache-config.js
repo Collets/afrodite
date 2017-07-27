@@ -9,6 +9,7 @@ module.exports = {
   root: 'dist',
   stripPrefix: 'dist/',
   navigateFallback: '/index.html',
+  navigateFallbackWhitelist: [/^(?!\/__)/],
   runtimeCaching: [{
     urlPattern: "areatest.scquadro.agency/afrodite/",
     handler: 'networkFirst'
