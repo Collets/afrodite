@@ -60,6 +60,17 @@
 
 ///////MAINPAGE
 
+.content-container{
+    width: 100%;
+    height: calc(100% - 56px);
+
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
 .content{
     width: 100%;
     height: calc(100% - 112px);
@@ -83,57 +94,20 @@
     z-index: 850;
 }
 
-///////BLOCKS
+.help-button{
+    position: fixed;
+    bottom: 75px;
+    left: 15px;
 
-.block{
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    padding: 15px;
-    box-sizing: border-box;
-
-    transition-duration: 600ms;
+    z-index: 775;
 }
 
-.block--hidden{
-    left: -100%;
-}
-
-.welcome-slider{
-    height: 100%;
-}
-
-.welcome-slider__slide{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-}
-
-.welcome-slider__title{
-    width: 100%;
-    font-size: 3rem;
+.help-button h1{
+    margin: 0;
 
     @include light;
-
-    text-align: center;
+    font-size: 2.4rem;
 }
-
-.welcome-slider__icon{
-    height: 100px;
-    width: 100px;
-}
-
-:host /deep/ .welcome-slider__icon .feather{
-    height: 100px;
-    width: 100px;
-}
-
 ///////MENU
 
 i-menu{
@@ -193,4 +167,11 @@ i-menu{
     right: 0;
 
     background-color: $primary-dark;
+    color: white;
+}
+
+.continue--disabled{
+    background-color: grey;
+
+    cursor: not-allowed;
 }

@@ -1,0 +1,318 @@
+<div [ngClass]="blockClasses[0]">
+  <swiper class="welcome-slider" [config]="swiperConfig">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide welcome-slider__slide">
+        <h2 class="welcome-slider__title">Completa il quiz</h2>
+        <img src="assets/images/quiz.gif" class="welcome-slider__icon">
+      </div>
+      <div class="swiper-slide welcome-slider__slide">
+        <h2 class="welcome-slider__title">Trova il regalo</h2>
+        <img src="assets/images/search.gif" class="welcome-slider__icon">
+      </div>
+      <div class="swiper-slide welcome-slider__slide">              
+        <h2 class="welcome-slider__title">Divertiti!</h2>
+        <img src="assets/images/fun.gif" class="welcome-slider__icon">
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </swiper>
+  <div class="welcome-commands">
+    <button md-raised-button class="welcome-button" color="primary" (click)="onSubmit()">
+        INIZIA
+    </button>
+  </div>
+</div>
+<div [ngClass]="blockClasses[1]">
+  <div class="question">
+    <div class="question__header">
+      <h2 class="question__title">Titolo domanda</h2>
+    </div>
+    <div class="question__content">
+      <p>Spiegazione non obbligatoria per rispondere alla domanda</p>
+    </div>
+  </div>
+  <div class="answer">
+    <form (ngSubmit)="onSubmit()">
+      <md-select placeholder="Risposta" [(ngModel)]="answers[0]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
+    </form>
+  </div>
+</div>
+<div [ngClass]="blockClasses[2]">
+  <div class="question">
+    <div class="question__header">
+      <h2 class="question__title">Seconda domanda</h2>
+    </div>
+    <div class="question__content">
+      <p>Spiegazione non obbligatoria per rispondere alla domanda</p>
+    </div>
+  </div>
+  <div class="answer">
+    <form (ngSubmit)="onSubmit()">
+      <md-radio-group [(ngModel)]="answers[1]" (ngModelChange)="changeAnswer()" class="answer__options" name="answer">
+          <md-radio-button md-line [value]="15" class="answer__option">
+            Risposta 1
+          </md-radio-button>
+          <md-radio-button md-line [value]="19" class="answer__option">
+            Risposta 2
+          </md-radio-button>
+          <md-radio-button md-line [value]="20" class="answer__option">
+            Risposta 3
+          </md-radio-button>
+        </md-radio-group>
+    </form>
+  </div>
+</div>
+<div [ngClass]="blockClasses[3]">
+  <div class="question">
+    <div class="question__header">
+      <h2 class="question__title">Titolo domanda</h2>
+    </div>
+    <div class="question__content">
+      <p>Spiegazione non obbligatoria per rispondere alla domanda</p>
+    </div>
+  </div>
+  <div class="answer">
+    <form (ngSubmit)="onSubmit()">
+      <md-select placeholder="Risposta" [(ngModel)]="answers[2]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
+    </form>
+  </div>
+</div>
+<div [ngClass]="blockClasses[4]">
+  <div class="question">
+    <div class="question__header">
+      <h2 class="question__title">Titolo domanda</h2>
+    </div>
+    <div class="question__content">
+      <p>Spiegazione non obbligatoria per rispondere alla domanda</p>
+    </div>
+  </div>
+  <div class="answer">
+    <form (ngSubmit)="onSubmit()">
+      <md-select placeholder="Risposta" [(ngModel)]="answers[3]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
+    </form>
+  </div>
+</div>
+<div [ngClass]="blockClasses[5]">
+  <div class="question">
+    <div class="question__header">
+      <h2 class="question__title">Titolo domanda</h2>
+    </div>
+    <div class="question__content">
+      <p>Spiegazione non obbligatoria per rispondere alla domanda</p>
+    </div>
+  </div>
+  <div class="answer">
+    <form (ngSubmit)="onSubmit()">
+      <md-select placeholder="Risposta" [(ngModel)]="answers[4]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
+    </form>
+  </div>
+</div>
+<div [ngClass]="blockClasses[6]">
+  <div class="question">
+    <div class="question__header">
+      <h2 class="question__title">Titolo domanda</h2>
+    </div>
+    <div class="question__content">
+      <p>Spiegazione non obbligatoria per rispondere alla domanda</p>
+    </div>
+  </div>
+  <div class="answer">
+    <form (ngSubmit)="onSubmit()">
+      <md-select placeholder="Risposta" [(ngModel)]="answers[5]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
+    </form>
+  </div>
+</div>
+<div [ngClass]="blockClasses[7]">
+  <div class="question">
+    <div class="question__header">
+      <h2 class="question__title">Titolo domanda</h2>
+    </div>
+    <div class="question__content">
+      <p>Spiegazione non obbligatoria per rispondere alla domanda</p>
+    </div>
+  </div>
+  <div class="answer">
+    <form (ngSubmit)="onSubmit()">
+      <md-select placeholder="Risposta" [(ngModel)]="answers[6]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
+    </form>
+  </div>
+</div>
+<div [ngClass]="blockClasses[8]">
+  <div class="question">
+    <div class="question__header">
+      <h2 class="question__title">Titolo domanda</h2>
+    </div>
+    <div class="question__content">
+      <p>Spiegazione non obbligatoria per rispondere alla domanda</p>
+    </div>
+  </div>
+  <div class="answer">
+    <form (ngSubmit)="onSubmit()">
+      <md-select placeholder="Risposta" [(ngModel)]="answers[7]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
+    </form>
+  </div>
+</div>
+<div [ngClass]="blockClasses[9]">
+  <div class="question">
+    <div class="question__header">
+      <h2 class="question__title">Titolo domanda</h2>
+    </div>
+    <div class="question__content">
+      <p>Spiegazione non obbligatoria per rispondere alla domanda</p>
+    </div>
+  </div>
+  <div class="answer">
+    <form (ngSubmit)="onSubmit()">
+      <md-select placeholder="Risposta" [(ngModel)]="answers[8]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
+    </form>
+  </div>
+</div>
+<div [ngClass]="blockClasses[10]">
+  <div class="question">
+    <div class="question__header">
+      <h2 class="question__title">Titolo domanda</h2>
+    </div>
+    <div class="question__content">
+      <p>Spiegazione non obbligatoria per rispondere alla domanda</p>
+    </div>
+  </div>
+  <div class="answer">
+    <form (ngSubmit)="onSubmit()">
+      <md-select placeholder="Risposta" [(ngModel)]="answers[9]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 1
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 2
+        </md-option>
+        <md-option value="Tigre">
+          Tigre
+        </md-option>
+        <md-option value="Opzione sbagliata">
+          Opzione sbagliata 3
+        </md-option>
+      </md-select>
+    </form>
+  </div>
+</div>
+<div class="block block--compliments">
+  <div class="compliments">
+    <h1 class="compliments__title">
+      Complimenti!
+    </h1>
+    <img class="compliments__image" src="assets/images/compliments.gif">
+  </div>
+  <div class="tips">
+    <h2 class="tips__title">Ecco il suggerimento per trovare il tuo premio:</h2>
+    <p class="tip">Per l'asse Y devi salire, e dove a volte ristori perquisire.</p>
+    <p class="surprise">Una volta scartato il premio premi qui sotto per un'altra fantastica sorpresa!</p>
+    <button md-raised-button class="welcome-button" color="primary">SORPRESA!</button>
+  </div>
+  <div class="auguri">
+    <img src="assets/images/auguri.gif">
+  </div>
+</div>
