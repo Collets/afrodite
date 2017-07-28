@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
       
       this.startpageClasses += ' startpage--hidden';
       clearTimeout(initialTimeout);
-    }, 3000);
+    }, 1500);
   }
 
 
