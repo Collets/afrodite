@@ -1,8 +1,9 @@
+import { SurprisePopupComponent } from '../surprise-popup/surprise-popup.component';
 import { retry } from 'rxjs/operator/retry';
 import { Component, EventEmitter, Input, OnInit, Output, QueryList, ViewChildren } from '@angular/core';
 
 import * as _ from 'lodash';
-import { MdInputDirective } from '@angular/material';
+import { MdInputDirective, MdDialog, MdDialogRef } from '@angular/material';
 
 @Component({
   selector: 'afrodite-blocks',
@@ -51,7 +52,7 @@ export class BlocksComponent implements OnInit {
     return true;
   }
 
-  constructor() { }
+  constructor(public dialog: MdDialog) { }
 
   ngOnInit() {
     
@@ -104,5 +105,15 @@ export class BlocksComponent implements OnInit {
           item.focus();
       });
     }
+  }
+
+  public openSurprise() {
+
+    let dialogRef = this.dialog.open(SurprisePopupComponent);
+    dialogRef.afterClosed().subscribe(result => {
+
+      if(result)
+        alert('yuppy!!');
+    });
   }
 }
