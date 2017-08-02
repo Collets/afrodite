@@ -17,6 +17,7 @@ import { SwiperModule } from 'angular2-useful-swiper';
 import 'hammerjs';
 import { InfoPopupComponent } from './info-popup/info-popup.component';
 import { BlocksComponent } from './blocks/blocks.component';
+import { SurprisePopupComponent } from './surprise-popup/surprise-popup.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BlocksComponent } from './blocks/blocks.component';
     PageNotFoundComponent,
     HomeComponent,
     InfoPopupComponent,
-    BlocksComponent
+    BlocksComponent,
+    SurprisePopupComponent
   ],
   imports: [
     FormsModule,
@@ -48,7 +50,8 @@ import { BlocksComponent } from './blocks/blocks.component';
     IconHeart
   ],
   entryComponents: [
-    InfoPopupComponent
+    InfoPopupComponent,
+    SurprisePopupComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
