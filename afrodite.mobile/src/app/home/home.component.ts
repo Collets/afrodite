@@ -1,6 +1,6 @@
 import { InfoPopupComponent } from '../info-popup/info-popup.component';
-import { Component, OnInit } from '@angular/core';
-import {MdDialog, MdDialogRef} from '@angular/material';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MdDialog, MdDialogRef, MdSidenav } from '@angular/material';
 import { CookieOptions, CookieService } from 'ngx-cookie';
 
 @Component({
@@ -9,6 +9,8 @@ import { CookieOptions, CookieService } from 'ngx-cookie';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+  @ViewChild('menu') menu: MdSidenav;
 
   public startpageClasses : string = 'startpage';
 
@@ -90,5 +92,6 @@ export class HomeComponent implements OnInit {
 
     this.step = 0;
     this.CookieService.remove('afrodite-step');
+    this.menu.close();
   }
 }
