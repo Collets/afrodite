@@ -19,6 +19,8 @@ import { InfoPopupComponent } from './info-popup/info-popup.component';
 import { BlocksComponent } from './blocks/blocks.component';
 import { SurprisePopupComponent } from './surprise-popup/surprise-popup.component';
 
+import { CookieModule } from 'ngx-cookie';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +49,8 @@ import { SurprisePopupComponent } from './surprise-popup/surprise-popup.componen
     IconInfo,
     IconCompass,
     IconPocket,
-    IconHeart
+    IconHeart,
+    CookieModule.forRoot()
   ],
   entryComponents: [
     InfoPopupComponent,

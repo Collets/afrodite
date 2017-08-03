@@ -18,10 +18,13 @@ export class BlocksComponent implements OnInit {
   private _step: number = 0;
   @Input() 
   set step(step: number){
+
     this._step = step;
 
-    this.changeClass();
-    this.focus();
+    if(this.blockClasses){
+
+      this.changeClass();
+    }
   }
   
   get step(): number{
@@ -56,16 +59,25 @@ export class BlocksComponent implements OnInit {
 
   ngOnInit() {
     
-    this.blockClasses = new Array<string>();
-    for(let i:number = 0; i <= this.totalStep;i++){
+    this.init();
+    this.changeClass();
+  }
 
-      this.blockClasses.push('block ' + 'block--' + i);
+  public init(){
+
+    if(!this.blockClasses){
+
+      this.blockClasses = new Array<string>();
+      for(let i:number = 0; i <= this.totalStep;i++){
+
+        this.blockClasses.push('block ' + 'block--' + i);
+      }
+
+      this.answers = new Array<any>(this.totalStep);
+      this.correctAnswers = new Array<any>();
+
+      this.setCorrectAnswers();
     }
-
-    this.answers = new Array<any>(this.totalStep);
-    this.correctAnswers = new Array<any>();
-
-    this.setCorrectAnswers();
   }
 
   public changeClass(){
@@ -95,17 +107,17 @@ export class BlocksComponent implements OnInit {
     this.correctAnswers[1] = '19';
   }
 
-  public focus(){
+  // public focus(){
 
-    if(this.inputs){
+  //   if(this.inputs){
 
-      this.inputs.forEach((item)=>{
+  //     this.inputs.forEach((item)=>{
 
-        if(item && item.id == ('input-' + (this.step - 1)))
-          item.focus();
-      });
-    }
-  }
+  //       if(item && item.id == ('input-' + (this.step - 1)))
+  //         item.focus();
+  //     });
+  //   }
+  // }
 
   public openSurprise() {
 
