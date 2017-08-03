@@ -85,4 +85,10 @@ export class HomeComponent implements OnInit {
 
       this.canNext = correct;
   }
+
+  public restart(){
+
+    this.step = 0;
+    this.CookieService.remove('afrodite-step');
+  }
 }

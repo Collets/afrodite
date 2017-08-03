@@ -82,9 +82,17 @@ export class BlocksComponent implements OnInit {
 
   public changeClass(){
 
-    for(let i:number = 0;i < this.step;i++){
+    if(this.step == 0){
 
-      this.blockClasses[i] = 'block block--hidden';
+      this.blockClasses = null;
+      this.init();
+    }
+    else{
+
+      for(let i:number = 0;i < this.step;i++){
+
+        this.blockClasses[i] = 'block block--hidden';
+      }
     }
   }
   public changeAnswer(){

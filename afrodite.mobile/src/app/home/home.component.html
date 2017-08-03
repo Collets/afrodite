@@ -6,10 +6,13 @@
   <md-sidenav-container class="mainpage">
     <md-sidenav class="menu" #menu mode="over">
       <div class="menu__header">
-        <img class="logo__gift logo__gift--fixed" src="assets/images/giftbox.svg">
+        <img class="logo__gift logo__gift--fixed" src="assets/icons/android-chrome-512x512-white.png">
         <h1 class="logo__title">i 25 anni di tigre</h1>
         <i-info class="info-button" (click)="openInfo()"></i-info>
       </div>
+      <md-nav-list class="menu_content">
+        <a md-list-item (click)="restart()">Ricomincia da capo</a>
+      </md-nav-list>
     </md-sidenav>
     <md-toolbar color="primary">
       <i-menu (click)="menu.toggle()"></i-menu>
