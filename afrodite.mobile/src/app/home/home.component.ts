@@ -1,6 +1,7 @@
 import { InfoPopupComponent } from '../info-popup/info-popup.component';
 import { Component, OnInit } from '@angular/core';
 import {MdDialog, MdDialogRef} from '@angular/material';
+import { CookieOptions, CookieService } from 'ngx-cookie';
 
 @Component({
   selector: 'afrodite-home',
@@ -32,7 +33,8 @@ export class HomeComponent implements OnInit {
 
   public canNext:boolean = false;
 
-  constructor(public dialog: MdDialog) { }
+  constructor(public dialog: MdDialog,
+              private CookieService:CookieService) { }
 
   ngOnInit() {
 
@@ -41,6 +43,10 @@ export class HomeComponent implements OnInit {
       this.startpageClasses += ' startpage--hidden';
       clearTimeout(initialTimeout);
     }, 1500);
+
+    var cookieStep: number = <number>this.CookieService.getObject('afrodite-step');
+    if(cookieStep)
+      this.step = cookieStep;
   }
 
 
@@ -62,6 +68,8 @@ export class HomeComponent implements OnInit {
 
       this.step++
       this.canNext = false;
+
+      this.CookieService.putObject('afrodite-step', this.step);
     }
       
   }
