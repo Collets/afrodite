@@ -124,18 +124,6 @@ export class BlocksComponent implements OnInit {
     this.correctAnswers[9] = '3';
   }
 
-  // public focus(){
-
-  //   if(this.inputs){
-
-  //     this.inputs.forEach((item)=>{
-
-  //       if(item && item.id == ('input-' + (this.step - 1)))
-  //         item.focus();
-  //     });
-  //   }
-  // }
-
   public openSurprise() {
 
     let dialogRef = this.dialog.open(SurprisePopupComponent);
