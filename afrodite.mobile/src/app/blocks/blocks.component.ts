@@ -112,7 +112,16 @@ export class BlocksComponent implements OnInit {
       this.correctAnswers.push('Tigre');
     }
 
-    this.correctAnswers[1] = '19';
+    this.correctAnswers[0] = '3';
+    this.correctAnswers[1] = '2';
+    this.correctAnswers[2] = '1';
+    this.correctAnswers[3] = '2';
+    this.correctAnswers[4] = '3';
+    this.correctAnswers[5] = '3';
+    this.correctAnswers[6] = '2';
+    this.correctAnswers[7] = '4';
+    this.correctAnswers[8] = '1';
+    this.correctAnswers[9] = '3';
   }
 
   // public focus(){
