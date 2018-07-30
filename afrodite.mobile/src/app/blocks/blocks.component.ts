@@ -3,7 +3,7 @@ import { retry } from 'rxjs/operator/retry';
 import { Component, EventEmitter, Input, OnInit, Output, QueryList, ViewChildren } from '@angular/core';
 
 import * as _ from 'lodash';
-import { MdInputDirective, MdDialog, MdDialogRef } from '@angular/material';
+import { MatInput, MatDialog, MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'afrodite-blocks',
@@ -44,7 +44,7 @@ export class BlocksComponent implements OnInit {
   public answers: Array<any>;
   public correctAnswers: Array<any>;
   
-  @ViewChildren(MdInputDirective) inputs: QueryList<MdInputDirective>;
+  @ViewChildren(MatInput) inputs: QueryList<MatInput>;
 
   // private _correct: boolean;
   get correct(){
@@ -55,7 +55,7 @@ export class BlocksComponent implements OnInit {
     return true;
   }
 
-  constructor(public dialog: MdDialog) { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
     

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MdDialog, MdDialogRef} from '@angular/material';
+import {MatDialog, MatDialogRef} from '@angular/material';
 
 @Component({
   selector: 'afrodite-surprise-popup',
@@ -8,7 +8,7 @@ import {MdDialog, MdDialogRef} from '@angular/material';
 })
 export class SurprisePopupComponent implements OnInit {
 
-  constructor(public dialogRef: MdDialogRef<SurprisePopupComponent>) { }
+  constructor(public dialogRef: MatDialogRef<SurprisePopupComponent>) { }
 
   ngOnInit() {
   }

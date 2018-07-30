@@ -17,7 +17,7 @@
     <div class="swiper-pagination"></div>
   </swiper>
   <div class="welcome-commands">
-    <button md-raised-button class="welcome-button" color="primary" (click)="onSubmit()">
+    <button mat-raised-button class="welcome-button" color="primary" (click)="onSubmit()">
         INIZIA
     </button>
   </div>
@@ -33,20 +33,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-select placeholder="Risposta" [(ngModel)]="answers[0]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
-        <md-option value="1">
+      <mat-select placeholder="Risposta" [(ngModel)]="answers[0]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <mat-option value="1">
           Justin Timberlake
-        </md-option>
-        <md-option value="2">
+        </mat-option>
+        <mat-option value="2">
           Shakira
-        </md-option>
-        <md-option value="3">
+        </mat-option>
+        <mat-option value="3">
           Mario Biondi
-        </md-option>
-        <md-option value="4">
+        </mat-option>
+        <mat-option value="4">
           Francesco Gabbani
-        </md-option>
-      </md-select>
+        </mat-option>
+      </mat-select>
     </form>
   </div>
 </div>
@@ -61,17 +61,17 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-radio-group [(ngModel)]="answers[1]" (ngModelChange)="changeAnswer()" class="answer__options" name="answer">
-          <md-radio-button md-line [value]="1" class="answer__option">
+      <mat-radio-group [(ngModel)]="answers[1]" (ngModelChange)="changeAnswer()" class="answer__options" name="answer">
+          <mat-radio-button mat-line [value]="1" class="answer__option">
             Supposte
-          </md-radio-button>
-          <md-radio-button md-line [value]="2" class="answer__option">
+          </mat-radio-button>
+          <mat-radio-button mat-line [value]="2" class="answer__option">
             Pillole
-          </md-radio-button>
-          <md-radio-button md-line [value]="3" class="answer__option">
+          </mat-radio-button>
+          <mat-radio-button mat-line [value]="3" class="answer__option">
             Digestivi
-          </md-radio-button>
-        </md-radio-group>
+          </mat-radio-button>
+        </mat-radio-group>
     </form>
   </div>
 </div>
@@ -86,20 +86,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-select placeholder="Risposta" [(ngModel)]="answers[2]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
-        <md-option value="1">
+      <mat-select placeholder="Risposta" [(ngModel)]="answers[2]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <mat-option value="1">
           Mamma chioccia
-        </md-option>
-        <md-option value="2">
+        </mat-option>
+        <mat-option value="2">
           Leonessa
-        </md-option>
-        <md-option value="3">
+        </mat-option>
+        <mat-option value="3">
           Scassaballe
-        </md-option>
-        <md-option value="4">
+        </mat-option>
+        <mat-option value="4">
           (l'ultima risposta è mia)
-        </md-option>
-      </md-select>
+        </mat-option>
+      </mat-select>
     </form>
   </div>
 </div>
@@ -114,20 +114,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-select placeholder="Risposta" [(ngModel)]="answers[3]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
-        <md-option value="1">
+      <mat-select placeholder="Risposta" [(ngModel)]="answers[3]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <mat-option value="1">
           Melevisione
-        </md-option>
-        <md-option value="2">
+        </mat-option>
+        <mat-option value="2">
           Baia imperiale
-        </md-option>
-        <md-option value="3">
+        </mat-option>
+        <mat-option value="3">
           Ah che bel sole c'era...
-        </md-option>
-        <md-option value="4">
+        </mat-option>
+        <mat-option value="4">
           Samsara
-        </md-option>
-      </md-select>
+        </mat-option>
+      </mat-select>
     </form>
   </div>
 </div>
@@ -142,20 +142,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-select placeholder="Risposta" [(ngModel)]="answers[4]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
-        <md-option value="1">
+      <mat-select placeholder="Risposta" [(ngModel)]="answers[4]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <mat-option value="1">
           Non ho capito di chi si parla 1
-        </md-option>
-        <md-option value="2">
+        </mat-option>
+        <mat-option value="2">
           Non ho capito di chi si parla 2
-        </md-option>
-        <md-option value="3">
+        </mat-option>
+        <mat-option value="3">
           Pipia (?)
-        </md-option>
-        <md-option value="4">
+        </mat-option>
+        <mat-option value="4">
           Non ho capito di chi si parla 3
-        </md-option>
-      </md-select>
+        </mat-option>
+      </mat-select>
     </form>
   </div>
 </div>
@@ -170,20 +170,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-select placeholder="Risposta" [(ngModel)]="answers[5]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
-        <md-option value="1">
+      <mat-select placeholder="Risposta" [(ngModel)]="answers[5]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <mat-option value="1">
           Film horror (AHA)
-        </md-option>
-        <md-option value="2">
+        </mat-option>
+        <mat-option value="2">
           Thriller (SE COME NO)
-        </md-option>
-        <md-option value="3">
+        </mat-option>
+        <mat-option value="3">
           Cartoni Disney
-        </md-option>
-        <md-option value="4">
+        </mat-option>
+        <mat-option value="4">
           Video di lanci col paracadute (EEEEEH)
-        </md-option>
-      </md-select>
+        </mat-option>
+      </mat-select>
     </form>
   </div>
 </div>
@@ -198,20 +198,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-select placeholder="Risposta" [(ngModel)]="answers[6]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
-        <md-option value="1">
+      <mat-select placeholder="Risposta" [(ngModel)]="answers[6]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <mat-option value="1">
           Persona a caso di Mirano 1
-        </md-option>
-        <md-option value="2">
+        </mat-option>
+        <mat-option value="2">
           Gabbo
-        </md-option>
-        <md-option value="3">
+        </mat-option>
+        <mat-option value="3">
           Persona a caso di Mirano 2
-        </md-option>
-        <md-option value="4">
+        </mat-option>
+        <mat-option value="4">
           Persona a caso di Mirano 3
-        </md-option>
-      </md-select>
+        </mat-option>
+      </mat-select>
     </form>
   </div>
 </div>
@@ -226,20 +226,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-select placeholder="Risposta" [(ngModel)]="answers[7]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
-        <md-option value="1">
+      <mat-select placeholder="Risposta" [(ngModel)]="answers[7]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <mat-option value="1">
           Intenzioni
-        </md-option>
-        <md-option value="2">
+        </mat-option>
+        <mat-option value="2">
           Cause
-        </md-option>
-        <md-option value="3">
+        </mat-option>
+        <mat-option value="3">
           Presupposti
-        </md-option>
-        <md-option value="4">
+        </mat-option>
+        <mat-option value="4">
           Motivi
-        </md-option>
-      </md-select>
+        </mat-option>
+      </mat-select>
     </form>
   </div>
 </div>
@@ -254,20 +254,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-select placeholder="Risposta" [(ngModel)]="answers[8]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
-        <md-option value="1">
+      <mat-select placeholder="Risposta" [(ngModel)]="answers[8]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <mat-option value="1">
           Colosseo
-        </md-option>
-        <md-option value="2">
+        </mat-option>
+        <mat-option value="2">
           Arco traiano
-        </md-option>
-        <md-option value="3">
+        </mat-option>
+        <mat-option value="3">
           Pantheon
-        </md-option>
-        <md-option value="4">
+        </mat-option>
+        <mat-option value="4">
           Altare della Patria
-        </md-option>
-      </md-select>
+        </mat-option>
+      </mat-select>
     </form>
   </div>
 </div>
@@ -282,20 +282,20 @@
   </div>
   <div class="answer">
     <form (ngSubmit)="onSubmit()">
-      <md-select placeholder="Risposta" [(ngModel)]="answers[9]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
-        <md-option value="1">
+      <mat-select placeholder="Risposta" [(ngModel)]="answers[9]" name="answer" (ngModelChange)="changeAnswer()" class="answer__input">
+        <mat-option value="1">
           Irritazione &amp; Memoria
-        </md-option>
-        <md-option value="2">
+        </mat-option>
+        <mat-option value="2">
           Pazienza &amp; Visione
-        </md-option>
-        <md-option value="3">
+        </mat-option>
+        <mat-option value="3">
           Pazienza &amp; Memoria
-        </md-option>
-        <md-option value="4">
+        </mat-option>
+        <mat-option value="4">
           Irritazione &amp; Visione
-        </md-option>
-      </md-select>
+        </mat-option>
+      </mat-select>
     </form>
   </div>
 </div>
@@ -310,7 +310,7 @@
     <h2 class="tips__title">Ecco il suggerimento per trovare il tuo premio:</h2>
     <p class="tip">Per l'asse Y devi salire, e dove a volte ristori perquisire.</p>
     <p class="surprise">Una volta scartato il premio premi qui sotto per l'ultimo passo!</p>
-    <button md-raised-button class="welcome-button" color="primary" (click)="openSurprise()">HO SCARTATO IL PREMIO</button>
+    <button mat-raised-button class="welcome-button" color="primary" (click)="openSurprise()">HO SCARTATO IL PREMIO</button>
   </div>
   <div class="auguri">
     <img src="assets/images/auguri.gif">

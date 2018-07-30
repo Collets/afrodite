@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 
-import {MdToolbarModule, MdSidenavModule, MdButtonModule,MdProgressBarModule, MdDialogModule, MdInputModule, MdRadioModule, MdListModule, MdSelectModule} from '@angular/material';
+import {MatToolbarModule, MatSidenavModule, MatButtonModule,MatProgressBarModule, MatDialogModule, MatInputModule, MatRadioModule, MatListModule, MatSelectModule} from '@angular/material';
 
 import { IconMenu, IconInfo, IconCompass, IconPocket, IconHeart } from 'angular-feather/angular-feather';
 
@@ -34,15 +34,15 @@ import { CookieModule } from 'ngx-cookie';
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    MdToolbarModule,
-    MdSidenavModule,
-    MdButtonModule,
-    MdProgressBarModule,
-    MdDialogModule,
-    MdInputModule,
-    MdRadioModule,
-    MdListModule,
-    MdSelectModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatProgressBarModule,
+    MatDialogModule,
+    MatInputModule,
+    MatRadioModule,
+    MatListModule,
+    MatSelectModule,
     BrowserAnimationsModule,
     SwiperModule,
     IconMenu,

@@ -1,6 +1,6 @@
 import { InfoPopupComponent } from '../info-popup/info-popup.component';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MdDialog, MdDialogRef, MdSidenav } from '@angular/material';
+import { MatDialog, MatDialogRef, MatSidenav } from '@angular/material';
 import { CookieOptions, CookieService } from 'ngx-cookie';
 
 @Component({
@@ -10,7 +10,7 @@ import { CookieOptions, CookieService } from 'ngx-cookie';
 })
 export class HomeComponent implements OnInit {
 
-  @ViewChild('menu') menu: MdSidenav;
+  @ViewChild('menu') menu: MatSidenav;
 
   public startpageClasses : string = 'startpage';
 
@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
 
   public canNext:boolean = false;
 
-  constructor(public dialog: MdDialog,
+  constructor(public dialog: MatDialog,
               private CookieService:CookieService) { }
 
   ngOnInit() {
